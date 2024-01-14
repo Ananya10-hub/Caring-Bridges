@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="signupcss.css">
+    <title>Women and Child</title>
+    <script>
+        // Function to validate the registration form
+        function validateForm() {
+            var firstname = document.forms["registrationForm"]["Firstname"].value;
+            var lastname = document.forms["registrationForm"]["Lastname"].value;
+            var email = document.forms["registrationForm"]["Email"].value;
+            var password = document.forms["registrationForm"]["Password"].value;
+
+            if (firstname === "" || lastname === "" || email === "" || password === "") {
+                alert("Please fill in all required fields.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <form action="process.php" method="post" autocomplete="off" onsubmit="return validateForm()" name="registrationForm">
+        <div class="register-container" id="register">
+            <div class="top">
+                <span>Have an account? <a href="login.html" onclick="login()">Login</a></span>
+                <header>Sign Up</header>
+            </div>
+            <div class="two-forms">
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Firstname" name="Firstname" id="firstname">
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Lastname" name="Lastname" id="lastname">
+                    <i class="bx bx-user"></i>
+                </div>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Email" name="Email" id="email">
+                <i class="bx bx-envelope"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Password" name="Password" id="password">
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            <div class="input-box">
+                <input type="submit" class="submit" value="Register">
+            </div>
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" id="register-check" name="remember">
+                    <label for="register-check"> Remember Me</label>
+                </div>
+                <div class="two">
+                    <label><a href="#">Terms & conditions</a></label>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

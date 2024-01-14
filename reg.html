@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="regcss.css">
+    <title>Women and Child</title>
+</head>
+
+<body>
+    <form action="regphp.php" method="post">
+        <div class="register-container" id="register">
+            <div class="two-forms">
+                <div class="input-box">
+                    <div class="custom-dropdown">
+                        <select name="SchemeName">
+                            <option value="" disabled selected hidden>SchemeName</option>
+                            <option value="a">Stree Shakthi</option>
+                            <option value="b">Shanthwana</option>
+                            <option value="c">Swayam Siddha</option>
+                            <option value="d">Rashtriya Bal Kosh</option>
+                            <option value="e">Bhagyalakshm</option>
+                            <option value="f">Beti Bachao Beti Padhao</option>
+                        </select>
+                    </div>    
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Name" name="Name">
+                    <i class="bx bxs-user-circle"></i>
+                </div>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Age" name="Age">
+                <i class="bx bxs-calendar-event"></i>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="District" name="District">
+                <i class="bx bxs-map"></i>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Taluk" name="Taluk">
+                <i class="bx bxs-building"></i>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Phone" name="Phone">
+                <i class="bx bxs-phone-call"></i>
+            </div>
+            <div class="input-box">
+                <div class="custom-dropdown">
+                    <select name="Maritalstat">
+                        <option value="" disabled selected hidden>Marital Status</option>
+                        <option value="married">Married</option>
+                        <option value="unmarried">Unmarried</option>
+                    </select>
+                </div>
+                <i class="bx bxs-heart"></i>
+            </div>
+            <div class="input-box">
+                <input type="submit" class="submit" value="Register">
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

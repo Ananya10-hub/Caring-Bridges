@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="helpcss.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-muZ5ra8nAFbW82XRU7TvG0I5jd5CQJbQ27u5sIN1fNcEFZ6a6ASWubnfcgE+mipMEprjjWG3YgN9eW+0kHvh5A==" crossorigin="anonymous" />
+</head>
+
+
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="logoblack.png" alt="Caring Bridges Logo" style="height: 40px; width: auto;">
+    </div>
+        <div class="menu">
+        <a href="home.html" class="btnone">Home</a>
+        <a href="child.html" class="btnone">Child</a>
+        <a href="women.html" class="btnone">Women</a>
+        <a href="beneuser.html" class="btnone">Benefactor</a>
+        <a href="feed.html" class="btnone">Feedback</a>
+        <a href="donor.html" class="btnone">Donors</a>
+        <a href="help.html" class="btnone">Helpline</a>
+        <a href="login.html" class="btnone">Logout</a>
+        
+      </div>
+    </nav>
+  </header>
+  <body>
+  <section class="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Feel free to get in touch with us.</p>
+
+      <div class="contact-info">
+        <div class="info-item">
+          <i class="bx bxs-map-pin"></i>
+          <span>7th Street, Mangalore, India</span>
+        </div>
+        <div class="info-item">
+          <i class="bx bx-phone"></i>
+          <span>9123456789</span>
+        </div>
+        <div class="info-item">
+          <i class="bx bx-envelope"></i>
+          <span>caringbridges@gmail.com</span>
+        </div>
+      </div>
+
+      <form action="helpphp.php" method="POST" class="contact-form">
+        <div class="form-group">
+          <label type="text" name="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label type="text" name="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label type="text" name="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" name="submit">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Caring Bridges. All Rights Reserved.</p>
+  </footer>
+</body>
+
+</html>

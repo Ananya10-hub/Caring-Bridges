@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+    <link rel="stylesheet" href="donform.css">
+    <title>Donor Form</title>
+
+    <script>
+        function validateForm() {
+            var donor_name = document.forms["feedbackForm"]["donor_name"].value;
+            var age = document.forms["feedbackForm"]["age"].value;
+            var phone_number = document.forms["feedbackForm"]["phone_number"].value;
+            var amount_donated = document.forms["feedbackForm"]["amount_donated"].value;
+            var mode_of_payment = document.forms["feedbackForm"]["mode_of_payment"].value;
+            var pgrm_name = document.forms["feedbackForm"]["pgrm_name"].value;
+
+            if (donor_name == "" || age == "" || phone_number == "" || amount_donated == "" || mode_of_payment == "" || pgrm_name == "") {
+                alert("Please fill in all required fields.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="logo">
+        <img src="logoblack.png" alt="Caring Bridges Logo" style="height: 45px; width: auto;">
+    </div>
+
+    <form method="POST" action="donform.php" autocomplete="off" onsubmit="return validateForm()">
+        <h2>Donor Form</h2>
+
+        <label>
+            <input type="text" name="donor_name" placeholder="Donor Name" required>
+            <i class="bx bxs-user"></i>
+        </label>
+
+        <label>
+            <input type="number" name="age" placeholder="Age" required>
+            <i class="bx bxs-user-detail"></i>
+        </label>
+
+        <label>
+            <input type="tel" name="phone_number" placeholder="Phone number" pattern="[0-9]{10}" required>
+            <i class="bx bxs-phone"></i>
+        </label>
+
+        <label>
+            <input type="text" name="amount_donated" placeholder="Amount Donated" required>
+            <i class="bx bxs-dollar-circle"></i>
+        </label>
+
+        <label>
+            <select name="mode_of_payment" required>
+                <option value="" disabled selected>Mode of Payment</option>
+                <option value="Card">Card</option>
+                <option value="Cash">Cash</option>
+                <option value="Cheque">Cheque</option>
+                <option value="UPI">UPI</option>
+                <option value="Net Banking">Net Banking</option>
+            </select>
+            <i class="bx bxs-credit-card"></i>
+        </label>
+
+        <label>
+            <select name="pgrm_name" required>
+                <option value="" disabled selected>Select Program Name</option>
+                <option value="Stree Shakthi">Stree Shakthi</option>
+                <option value="Shanthwana">Shanthwana</option>
+                <option value="Swayam Siddha">Swayam Siddha</option>
+                <option value="Mahila Udyam Nidhi">Mahila Udyam Nidhi</option>
+                <option value="Bhagyalakshmi">Bhagyalakshmi</option>
+                <option value="Dena Shakti">Dena Shakti</option>
+                <option value="Beti Bachao Beti Padhao">Beti Bachao Beti Padhao</option>
+                <option value="Balika Samridhi Yojana">Balika Samridhi</option>
+                <option value="Sukanya Samriddhi">Sukanya Samriddhi</option>
+                <option value="Ladli Scheme">Ladli Scheme</option>
+                <option value="Child Protection services">Child Protection services</option>
+                <option value="POSHAN Abhiyaan">POSHAN Abhiyaan</option>
+            </select>
+            <i class="bx bxs-calendar-event"></i>
+        </label>
+        <input type="submit" id="submit" name="submit" value="Donate">
+    </form>
+
+</body>
+
+</html>

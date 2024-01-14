@@ -1,0 +1,104 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Container Styles */
+.register-container {
+    width: 400px;
+    background-color: #ffffff;
+    margin: 100px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-weight: 100;
+    font-style: bold;
+}
+
+/* Top Section Styles */
+.top {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.top span {
+    font-size: 14px;
+    color: #888888;
+}
+
+.top a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+header {
+    font-size: 24px;
+    color: #333333;
+    margin-top: 10px;
+}
+
+/* Input Box Styles */
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+    width: 380px;
+    font-weight: 100;
+}
+
+.input-field,
+.custom-dropdown select {
+    width: calc(100% - 30px); /* Adjusted width to accommodate the icons */
+    padding: 10px 30px 10px 40px; /* Added space for the icon */
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    margin-top: 5px;
+    background-color: transparent;
+    color: #555555;
+    cursor: pointer;
+}
+
+/* Adjust icon positions */
+.bx {
+    position: absolute;
+    top: 50%;
+    left: 10px; /* Adjusted to align icons on the left */
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #555555;
+}
+
+/* Submit Button Styles */
+.submit {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: rgb(215, 172, 215);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.input-box .submit:hover {
+    background-color: rgb(204, 72, 204);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.285);
+    transform: scale(1.02);
+    border-color: none;
+}
+
+/* Checkbox Styles */
+#register-check {
+    margin-right: 5px;
+}
+
+/* Hyperlink Styles */
+label a {
+    color: #3498db;
+    text-decoration: none;
+}

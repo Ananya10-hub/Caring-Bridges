@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+    <link rel="stylesheet" href="admin_bene_ccss.css">
+    <title>Registration Form</title>
+
+    <script>
+        function validateForm() {
+            var name = document.forms["registrationForm"]["name"].value;
+            var dob = document.forms["registrationForm"]["dob"].value;
+            var ph_no = document.forms["registrationForm"]["ph_no"].value;
+            var addr = document.forms["registrationForm"]["addr"].value;
+            var prgm_name = document.forms["registrationForm"]["prgm_name"].value;
+
+            if (name == "" || dob == "" || ph_no == "" || addr == "" || prgm_name == "") {
+                alert("Please fill in all required fields.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+<body>
+
+    <form method="POST" action="admin_bene_cphp.php" autocomplete="off" onsubmit="return validateForm()">
+        <h2>Admin Input</h2>
+
+        <label>
+            <input type="text" name="name" placeholder="Name" required autocomplete="new-password">
+            <i class="bx bxs-user"></i>
+        </label>
+
+        <label>
+            <select name="prgm_name" required autocomplete="new-password">
+                <option value="" disabled selected>Select Program Name</option>
+                <option value="Beti Bachao Beti Padhao">Beti Bachao Beti Padhao</option>
+                <option value="Balika Samridhi Yojana">Balika Samridhi Yojana</option>
+                <option value="Sukanya Samriddhi">Sukanya Samriddhi</option>
+                <option value="Ladli Scheme">Ladli Scheme</option>
+                <option value="Child Protection services">Child Protection services</option>
+                <option value="POSHAN Abhiyaan">POSHAN Abhiyaan</option>
+            </select>
+            <i class="bx bxs-calendar-event"></i>
+        </label>
+
+        <label>
+            <input type="date" name="std" placeholder="Startdate" required autocomplete="new-password">
+            <i class="bx bxs-calendar"></i>
+        </label>
+
+        <label>
+            <input type="tel" name="ph_no" placeholder="Phone number" pattern="[0-9]{10}" required autocomplete="new-password">
+            <i class="bx bxs-phone"></i>
+        </label>
+
+        <label>
+            <input type="text" name="det" placeholder="Details" required autocomplete="new-password">
+            <i class="bx bxs-map"></i>
+        </label>
+
+        <input type="submit" id="submit" name="submit" value="Submit">
+    </form>
+
+</body>
+</html>

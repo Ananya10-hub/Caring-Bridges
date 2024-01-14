@@ -1,0 +1,120 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css);
+
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    background: url('p1.jpg') center center fixed;
+    background-size: cover;
+}
+
+.logo {
+    position: absolute;
+    top: 50px; /* Adjust the top distance */
+    right: 290px; /* Adjust the left distance */
+    width: 25%;
+    text-align: center;
+}
+
+/* Container Styles */
+form {
+    width: 400px;
+    background-color: #ffffff;
+    margin: 100px auto;
+    margin-top: 150px;    
+    margin-right: 250px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-weight: 100;
+    font-style: bold;
+    border-radius: 25px;
+}
+
+/* Top Section Styles */
+form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form label {
+    position: relative;
+}
+
+/* Input Box Styles */
+form label,
+form select,
+form input {
+    display: block;
+    width: 380px;
+    margin-bottom: 15px;
+}
+
+form select,
+form input[type="text"],
+form input[type="tel"],
+form input[type="submit"] {
+    padding: 10px 30px 10px 10px;
+    font-size: 16px;
+    width: 360px;
+    border: none;
+    border-radius: 25px;
+    background-color: transparent;
+    color: #555555;
+    cursor: pointer;
+    border: 1px solid #ddd; /* Added border style */
+}
+
+/* Icon Styles */
+form i {
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #555555;
+}
+
+/* Submit Button Styles */
+form input[type="submit"] {
+    width: 400px;
+    background-color: rgb(215, 172, 215);
+    color: #ffffff;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    text-align: center;
+}
+
+form input[type="submit"]:hover {
+    background-color: rgb(204, 72, 204);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.285);
+    transform: scale(1.02);
+    border-color: none;
+}
+
+/* Text Area Styles */
+form textarea {
+    width: 380px;
+    padding: 10px;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    background-color: transparent;
+    border: 1px solid #ddd; /* Added border style */
+    color: #555555;
+    /* Disable textarea resizing */
+    height: 100px; /* Set a fixed height for the textarea */
+}
+
+/* Icon Styles for Text Area */
+form textarea + i {
+    top: 15px; /* Adjust the position of the icon for the textarea */
+}
+
+/* Hyperlink Styles */
+form label a {
+    color: #3498db;
+    text-decoration: none;
+}
+

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+    <link rel="stylesheet" href="feedcss.css">
+    <title>Feedback Form</title>
+
+    <script>
+        function validateForm() {
+            var pgm_name = document.forms["feedbackForm"]["pgm_name"].value;
+            var rating = document.forms["feedbackForm"]["rating"].value;
+            var comments = document.forms["feedbackForm"]["comments"].value;
+            var phone_no = document.forms["feedbackForm"]["phone_no"].value;
+
+            if (pgm_name == "" || rating == "" || comments == "" || phone_no == "") {
+                alert("Please fill in all required fields.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+<body>
+
+    <div class="logo">
+        <img src="logoblack.png" alt="Caring Bridges Logo" style="height: 45px; width: auto;">
+    </div>
+
+    <form method="POST" action="feedphp.php" autocomplete="off" onsubmit="return validateForm()">
+        <h2>Feedback Form</h2>
+        <label>
+            <select name="pgm_name" required autocomplete="new-password">
+                <option value="" disabled selected>Select Program Name</option>
+                <option value="Stree Shakthi">Stree Shakthi</option>
+                <option value="Shanthwana">Shanthwana</option>
+                <option value="Swayam Siddha">Swayam Siddha</option>
+                <option value="Mahila Udyam Nidhi">Mahila Udyam Nidhi</option>
+                <option value="Bhagyalakshmi">Bhagyalakshmi</option>
+                <option value="Dena Shakti">Dena Shakti</option>
+                <option value="Beti Bachao Beti Padhao">Beti Bachao Beti Padhao</option>
+                <option value="Balika Samridhi Yojana">Balika Samridhi</option>
+                <option value="Sukanya Samriddhi">Sukanya Samriddhi</option>
+                <option value="Ladli Scheme">Ladli Scheme</option>
+                <option value="Child Protection services">Child Protection services</option>
+                <option value="POSHAN Abhiyaan">POSHAN Abhiyaan</option>
+            </select>
+            <i class="bx bxs-calendar-event"></i>
+        </label>
+
+        <label>
+            <input type="tel" name="rating" placeholder="Rating (1-5)" pattern="[1-5]{1}" autocomplete="off" required autocomplete="new-password">
+            <i class="bx bxs-star"></i>
+        </label>
+
+        <label>
+            <textarea name="comments" placeholder="Comments" required autocomplete="new-password"></textarea>
+            <i class="bx bxs-comment-dots"></i>
+        </label>
+
+        <label>
+            <input type="tel" name="phone_no" placeholder="Phone number" pattern="[0-9]{10}" autocomplete="off" required autocomplete="new-password">
+            <i class="bx bxs-phone"></i>
+        </label>
+
+        <input type="submit" id="submit" name="submit" value="Submit Feedback">
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+    <link rel="stylesheet" href="child_regcss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-...." crossorigin="anonymous" />
+    <title>Registration Form</title>
+
+    <script>
+        function validateForm() {
+            var scheme_name = document.forms["registrationForm"]["scheme_name"].value;
+            var cname = document.forms["registrationForm"]["cname"].value;
+            var womname = document.forms["registrationForm"]["womname"].value;
+            var age = document.forms["registrationForm"]["age"].value;
+            var gender = document.forms["registrationForm"]["gender"].value;
+            var vacc = document.forms["registrationForm"]["vacc"].value;
+            var edu = document.forms["registrationForm"]["edu"].value;
+            var age_proof = document.forms["registrationForm"]["age_proof"].value;
+
+            if (scheme_name == "" || cname == "" || womname == "" || age == "" || gender == "" || vacc == "" || age_proof == "") {
+                alert("Please fill in all required fields.");
+                return false;
+            }
+        }
+
+        var ageProofLabel = document.getElementById("ageProofLabel");
+    </script>
+</head>
+<body>
+
+    <div class="logo">
+        <img src="logoblack.png" alt="Caring Bridges Logo" style="height: 45px; width: auto;">
+    </div> 
+
+    <form method="POST" action="child_regphp.php" autocomplete="off" enctype="multipart/form-data" onsubmit="return validateForm()">
+        <h2>Registration Form</h2>
+
+        <label>
+            <select name="scheme_name" required>
+                <option value="" disabled selected>Select Scheme</option>
+                <option value="Beti Bachao Beti Padhao">Beti Bachao Beti Padhao</option>
+                <option value="Balika Samridhi Yojana">Balika Samridhi</option>
+                <option value="Sukanya Samriddhi">Sukanya Samriddhi</option>
+                <option value="Ladli Scheme">Ladli Scheme</option>
+                <option value="Child Protection services">Child Protection services</option>
+                <option value="POSHAN Abhiyaan">POSHAN Abhiyaan</option>
+            </select>
+            <i class="fas fa-chart-bar"></i>
+        </label>
+
+        <label>
+            <input type="text" name="cname" placeholder="Child Name" required>
+            <i class="bx bxs-id-card"></i>
+        </label>
+
+        <label>
+            <input type="text" name="womname" placeholder="Mother's Name" required>
+            <i class="fas fa-pencil-alt"></i>
+        </label>
+
+        <label>
+            <input type="number" name="age" placeholder="Age" required>
+            <i class="bx bxs-calendar"></i>
+        </label>
+
+        <label id="ageProofLabel">
+            <input type="file" name="age_proof" accept=".jpg, .jpeg, .png" placeholder="Upload Age Proof Document" required>
+            <i class="bx bxs-image"></i>
+        </label>
+        
+        <label>
+            <select name="gender" required>
+                <option value="" disabled selected>Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Others">Others</option>
+            </select>            
+            <i class="fas fa-users"></i>
+        </label>
+
+        <label>
+            <select name="vacc" required>
+                <option value="" disabled selected>Vaccination Status (Polio,Chickenpox...)</option>
+                <option value="Completed">Completed</option>
+                <option value="Not Completed">Not Completed</option>
+            </select>
+            <i class="fas fa-syringe"></i>
+        </label>
+
+        <label>
+            <select name="edu" required>
+                <option value="" disabled selected>Select Education Status</option>
+                <option value="SSLC">SSLC</option>
+                <option value="PUC">PUC</option>
+                <option value="Degree">Degree</option>
+                <option value="None">None</option>
+            </select>
+            <i class="fas fa-graduation-cap"></i>
+        </label>
+
+        <input type="submit" name="submit" value="Register">
+    </form>
+
+</body>
+</html>

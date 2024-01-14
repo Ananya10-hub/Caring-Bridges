@@ -1,0 +1,49 @@
+body {
+
+    font-family: 'Arial', sans-serif;
+    background: url('su1.jpg') center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.feedback-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+}
+
+h2 {
+    color: #333;
+    font-size: 28px;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+thead {
+    background-color: #333;
+    color: #fff;
+    border-radius: 20px;
+}
+
+thead th {
+    padding: 10px;
+}
+
+tbody td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+tbody tr:hover {
+    background-color: #f0f0f0;
+}
